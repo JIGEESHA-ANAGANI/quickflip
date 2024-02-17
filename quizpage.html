@@ -5,39 +5,11 @@
 <head>
   <meta charset="UTF-8">
   <title>quiz menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-  <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Quick Flip</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Material</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="quizpage.html" class="dropdown-item">QUIZ</a>
-                        <a href="flashmenu.html" class="dropdown-item">FLASH CARDS</a>
-                        <a href="CustomQuiz" class="dropdown-item">CUSTOMIZE</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link active">Feedback</a>
-            </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Sign in<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
 
 
      <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
@@ -51,7 +23,7 @@
        <div class="face face2">
          <div class="content">
            <p>C is a fast, portable programming language known for its efficiency and close-to-the-hardware functionality, widely used in system programming and embedded systems.</p>
-<a href="quizsub1.html"><button align="center">Start Quiz!</button></a>
+<a href="quizsub1.html"><button align="center">START QUIZ</button></a>
          </div>
        </div>
     </div>
@@ -65,7 +37,7 @@
        <div class="face face2">
          <div class="content">
            <p>C++ is a powerful, efficient programming language renowned for its flexibility and support for both procedural and object-oriented programming paradigms</p>
-           <a href="quizsub2.html"><button align="center">Start Quiz!</button></a>
+           <a href="quizsub2.html"><button align="center">START QUIZ</button></a>
 
          </div>
        </div>
@@ -81,7 +53,7 @@
        <div class="face face2">
          <div class="content">
            <p>Python is a versatile, readable language prized for its simplicity and vast library ecosystem, popular across web development, data analysis, and AI.</p>
-<a href="quizsub3.html"><button align="center">Start Quiz!</button></a>
+<a href="quizsub3.html"><button align="center">STAT QUIZ</button></a>
          </div>
        </div>
     </div>
@@ -95,7 +67,7 @@
       <div class="face face2">
         <div class="content">
           <p>Java is a widely-used, object-oriented programming language known for platform independence and used for enterprise applications, mobile apps, and web services.</p>
-<a href="quizsub4.html"><button align="center">Start Quiz!</button></a>
+<a href="quizsub4.html"><button align="center">START NOW </button></a>
         </div>
       </div>
    </div>
@@ -110,7 +82,7 @@
     <div class="face face2">
       <div class="content">
         <p>R is an open-source language for statistical computing and data analysis, featuring extensive libraries for machine learning and visualization, widely used in academia and industry.</p>
-<a href="quizsub5.html"><button align="center">Start Quiz!</button></a>
+<a href="quizsub5.html"><button align="center">START QUIZ</button></a>
       </div>
     </div>
  </div>
@@ -123,6 +95,7 @@
 </html>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 
 :root
 {
@@ -249,7 +222,7 @@ header .icons #menu
 }
 .reservation .form form input:placeholder
 {
-	color: #b7b3b3;
+	color: #333;
 }
 
 
@@ -261,7 +234,7 @@ header .icons #menu
 
 .blog .box-container .box 
 {
-	background: #0d6476;
+	background: #0d6f76;
 }
 .blog .content
 {
@@ -287,17 +260,13 @@ header .icons #menu
 	right: 0;
 	bottom: 0;
 }
-.sign in .content a
+*
 {
-	color: #25cea3!important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.sign in .content a
-{
-	font-size: 14px;
-	display: inline-block;
-	
-	
-}
+
    
 
 
@@ -306,8 +275,7 @@ body{
   margin:0;
   padding:0;
   min-height: 100vh;
-  background: #99a6ae;
-  justify-content: center;
+  background: linear-gradient(#48bcc4, white);  justify-content: center;
   align-items: center;
   font-family: arial;
 }
@@ -334,10 +302,11 @@ body{
 
 .container .card .face.face1{
   position: relative;
-  background: #444e4c;
+  background: #4397a2;
   display: flex;
   justify-content: center;
   align-content:center;
+  font-size: 15px;
   align-items: center;
   z-index: 1;
   transform: translateY(100px);
@@ -347,12 +316,12 @@ body{
   transform: translateY(0);
   box-shadow:
     inset 0 0 60px whitesmoke,
-    inset 20px 0 80px #f0f,
-    inset -20px 0 80px #0ff,
-    inset 20px 0 300px #f0f,
+    inset 20px 0 80px rgb(32, 237, 245),
+    inset -20px 0 80px rgb(74, 232, 213),
+    inset 20px 0 300px rgba(169, 225, 91, 0.79),
     inset -20px 0 300px #0ff,
     0 0 50px #fff,
-    -10px 0 80px #f0f,
+    -10px 0 80px rgb(206, 115, 206),
     10px 0 80px #0ff;
    
 }
@@ -371,15 +340,15 @@ body{
 }
 
 .container .card .face.face1 .content i{
-  font-size: 3em;
-  color: white;
+  font-size: 2em;
+  color: rgb(14, 2, 2);
   display: inline-block;
    
 }
 
 .container .card .face.face1 .content h3{
-  font-size: 1em;
-  color: white;
+  font-size: 2em;
+  color: rgb(13, 8, 8);
   text-align: center;
   
 
@@ -391,13 +360,13 @@ body{
 
 .container .card .face.face2{
    position: relative;
-   background: #83999c;
+   background: #55a5af;
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  box-shadow: 0 20px 50px rgba(78, 74, 74, 0.8);
   transform: translateY(-100px);
 }
 
@@ -411,7 +380,7 @@ body{
   font-size: 10pt;
   margin: 0 ;
   padding: 0;
-  color:#333;
+  color:#8fc0bb;
 }
 
 .container .card .face.face2 .content a{
@@ -427,7 +396,7 @@ body{
 }
 
 .container .card .face.face2 .content a:hover{
-  background: #747171 ;
+  background: #05ffb8 ;
   color: whitesmoke; 
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
