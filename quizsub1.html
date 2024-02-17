@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Menu</title>
+<style>
+  /* Add your custom styles here */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbe4eb; /* Blue elegant shade */
+  }
+
+  .header-container {
+    padding: 20px;
+    background-color: #ffcc00; /* Yellow background color */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header-container h1 {
+    color: #333;
+    margin: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 100px; /* Adjusted for the header container height */
+    height: calc(100% - 100px); /* Adjusted for the header container height */
+    width: 200px;
+    background-color: #263238; /* Dark blue background color */
+    padding-top: 20px;
+    transition: width 0.5s;
+  }
+
+  .unitBtn {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #263238; /* Dark blue background color */
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+  }
+
+  .unitBtn:hover {
+    background-color: #37474f; /* Slightly lighter shade of blue on hover */
+  }
+
+  .unitBtn.active {
+    background-color: #37474f; /* Active shade of blue */
+  }
+
+  .topicBtn {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .unitBtn.active + .topicBtn {
+    display: block;
+  }
+
+  .content {
+    margin-left: 220px; /* Adjusted for the sidebar width and padding */
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for glow effect */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for glow effect */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .question {
+    margin-bottom: 20px;
+  }
+
+  .options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .options input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .btn-container {
+    text-align: center;
+  }
+
+  .btn-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-container button:hover {
+    background-color: #45a049;
+  }
+
+  #timer {
+    color: #ff6347; /* Red color for timer */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #submitBtn {
+    display: none;
+    padding: 10px 20px;
+    background-color: #ff5722; /* Different color for submit button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #submitBtn:hover {
+    background-color: #e64a19;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-container">
+  <h1>NOW THE TEST TIME</h1>
+  <H1> SUBJECT 1</H1>
+</div>
+
+<div class="sidebar">
+  <button class="unitBtn">Unit 1</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+
+  <button class="unitBtn">Unit 2</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 3</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 4</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 5</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+</div>
+
+<div class="content" style="display: none;">
+  <div class="container">
+    <h1>Topic 1 Quiz</h1>
+
+    <div class="question" id="question1">
+      <p>Question 1: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question2">
+<p>Question 2: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question3">
+<p>Question 3: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question4">
+<p>Question 4: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question5">
+<p>Question 5: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question6">
+<p>Question 6: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question7">
+<p>Question 7: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+<div class="question" id="question8">
+<p>Question 8: What is the capital of France?</p>
+      <div class="options">
+        <label><input type="checkbox" name="q1" value="option1"> Option 1</label>
+        <label><input type="checkbox" name="q1" value="option2"> Option 2</label>
+        <label><input type="checkbox" name="q1" value="option3"> Option 3</label>
+        <label><input type="checkbox" name="q1" value="option4"> Option 4</label>
+      </div>
+    </div>
+
+
+   
+    <div class="btn-container">
+      <button id="startBtn">Start Quiz</button>
+      <button id="prevBtn" disabled>Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn" style="display: none;">Resume</button>
+    </div>
+    
+    <div class="btn-container">
+<br>
+      <button id="submitBtn">Submit</button>
+    </div>
+
+    <p id="timer">Time remaining: 10:00</p>
+  </div>
+</div>
+
+<script>
+  const unitButtons = document.querySelectorAll('.unitBtn');
+  const topicButtons = document.querySelectorAll('.topicBtn');
+  const questions = document.querySelectorAll('.question');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const startBtn = document.getElementById('startBtn');
+  const pauseBtn = document.getElementById('pauseBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
+  const timerDisplay = document.getElementById('timer');
+  let currentQuestion = 1;
+  let timer = 600;
+  let timerInterval;
+
+  // Event listener for unit buttons
+  unitButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Hide all topic buttons
+      topicButtons.forEach(topicBtn => {
+        topicBtn.style.display = 'none';
+      });
+      // Show corresponding topic buttons
+      const unitIndex = Array.from(unitButtons).indexOf(button);
+      const topicStartIndex = unitIndex * 10;
+      for (let i = topicStartIndex; i < topicStartIndex + 10; i++) {
+        topicButtons[i].style.display = 'block';
+      }
+      // Activate clicked unit button
+      document.querySelectorAll('.unitBtn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+    });
+  });
+
+  // Event listener for topic buttons
+  topicButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      displayQuiz();
+    });
+  });
+
+  function displayQuiz() {
+    // Show quiz container
+    document.querySelector('.content').style.display = 'block';
+    // Hide sidebar
+    document.querySelector('.sidebar').style.display = 'none';
+  }
+
+  function showQuestion(questionIndex) {
+    questions.forEach((question, index) => {
+      if (index === questionIndex) {
+        question.style.display = 'block';
+      } else {
+        question.style.display = 'none';
+      }
+    });
+
+    if (questionIndex === 0) {
+      prevBtn.disabled = true;
+    } else {
+      prevBtn.disabled = false;
+    }
+
+    if (questionIndex === questions.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      nextBtn.style.display = 'inline-block';
+      submitBtn.style.display = 'none';
+    }
+  }
+
+  function prevQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      if (timer > 0) {
+        timer--;
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
+        timerDisplay.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      } else {
+        clearInterval(timerInterval);
+        nextQuestion();
+        timer = 600; // Reset timer for next question
+      }
+    }, 1000);
+  }
+
+  function pauseTimer() {
+    clearInterval(timerInterval);
+    resumeBtn.style.display = 'inline-block';
+    pauseBtn.style.display = 'none';
+  }
+
+  function resumeTimer() {
+    startTimer();
+    resumeBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline-block';
+  }
+
+  startBtn.addEventListener('click', () => {
+    startTimer();
+    startBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline-block';
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    pauseTimer();
+  });
+
+  resumeBtn.addEventListener('click', () => {
+    resumeTimer();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevQuestion();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    nextQuestion();
+  });
+submitBtn.addEventListener('click', () => {
+    clearInterval(timerInterval); // Stop the timer
+    document.querySelector('.content').style.display = 'none'; // Hide the quiz container
+    document.querySelector('.sidebar').style.display = 'block'; // Show the sidebar with initial menu
+});
+
+
+  showQuestion(currentQuestion);
+</script>
+
+</body>
+</html>
