@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flashunit menu</title>
+<style>
+  /* Add your custom styles here */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbe4eb; /* Blue elegant shade */
+  }
+
+  .header-container {
+    padding: 20px;
+    background-color: #ffcc00; /* Yellow background color */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header-container h1 {
+    color: #333;
+    margin: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 100px; /* Adjusted for the header container height */
+    height: calc(100% - 100px); /* Adjusted for the header container height */
+    width: 200px;
+    background-color: #263238; /* Dark blue background color */
+    padding-top: 20px;
+    transition: width 0.5s;
+  }
+
+  .unitBtn {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #263238; /* Dark blue background color */
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+  }
+
+  .unitBtn:hover {
+    background-color: #37474f; /* Slightly lighter shade of blue on hover */
+  }
+
+  .unitBtn.active {
+    background-color: #37474f; /* Active shade of blue */
+  }
+
+  .topicBtn {
+    display: none;
+    padding-left: 50px;
+  }
+
+  .unitBtn.active + .topicBtn {
+    display: block;
+  }
+/* Custom styles for the flip card */
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Add 3D perspective */
+    display: none; /* Initially hidden */
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back side of the card */
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg); /* Initially hidden */
+  }
+
+  /* Styling for buttons */
+  .flip-card-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .flip-card-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .flip-card-button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-container">
+  <h1>HAVE THE QUICK RREVISION THROUGH FLASH CARS </h1>
+  <H1> SUBJECT 1</H1>
+</div>
+
+<div class="sidebar">
+  <button class="unitBtn">Unit 1</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+
+  <button class="unitBtn">Unit 2</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 3</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 4</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+<button class="unitBtn">Unit 5</button>
+  <div class="topics">
+    <button class="topicBtn">Topic 1</button>
+    <button class="topicBtn">Topic 2</button>
+    <button class="topicBtn">Topic 3</button>
+    <button class="topicBtn">Topic 4</button>
+    <button class="topicBtn">Topic 5</button>
+    <button class="topicBtn">Topic 6</button>
+    <button class="topicBtn">Topic 7</button>
+    <button class="topicBtn">Topic 8</button>
+    <button class="topicBtn">Topic 9</button>
+    <button class="topicBtn">Topic 10</button>
+  </div>
+</div>
+<!-- Flip cards -->
+<div class="flip-cards">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2>Front Side 1</h2>
+      </div>
+      <div class="flip-card-back">
+        <h2>Back Side 1</h2>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2>Front Side 2</h2>
+      </div>
+      <div class="flip-card-back">
+        <h2>Back Side 2</h2>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2>Front Side 3</h2>
+      </div>
+      <div class="flip-card-back">
+        <h2>Back Side 3</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buttons below flip cards -->
+<div class="flip-card-buttons">
+  <button class="flip-card-button">previous</button>
+  <button class="flip-card-button">next</button>
+</div>
+
+<script>
+  const unitButtons = document.querySelectorAll('.unitBtn');
+  const topicButtons = document.querySelectorAll('.topicBtn');
+  const flipCards = document.querySelectorAll('.flip-card');
+
+  // Event listener for unit buttons
+  unitButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Hide all topic buttons
+      topicButtons.forEach(topicBtn => {
+        topicBtn.style.display = 'none';
+      });
+      // Show corresponding topic buttons
+      const unitIndex = Array.from(unitButtons).indexOf(button);
+      const topicStartIndex = unitIndex * 10;
+      for (let i = topicStartIndex; i < topicStartIndex + 10; i++) {
+        topicButtons[i].style.display = 'block';
+      }
+      // Activate clicked unit button
+      document.querySelectorAll('.unitBtn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+    });
+  });
+
+  // Event listener for topic buttons
+  topicButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Hide all flip cards
+      flipCards.forEach(card => {
+        card.style.display = 'none';
+      });
+      // Show corresponding flip card
+      flipCards[index].style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
